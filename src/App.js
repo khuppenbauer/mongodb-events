@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { Admin, Resource } from 'react-admin';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css';
+import dataProvider from './components/admin/dataProvider/dataProvider';
+import theme from './components/admin/themes/default'
+import messages from './components/admin/resources/messages';
+import tasks from './components/admin/resources/tasks';
+import subscriptions from './components/admin/resources/subscriptions';
+import logs from './components/admin/resources/logs';
+
+const App = () => (
+  <Admin theme={theme} dataProvider={dataProvider} disableTelemetry>
+    <Resource name="messages" {...messages} />
+    <Resource name="tasks" {...tasks} />
+    <Resource name="subscriptions" {...subscriptions} />
+    <Resource name="logs" {...logs} />
+  </Admin>
+);
 
 export default App;
