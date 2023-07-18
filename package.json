@@ -10,7 +10,7 @@
     "dayjs": "^1.10.7",
     "dotenv": "^10.0.0",
     "lodash": "^4.17.21",
-    "mongoose": "^6.4.6",
+    "mongoose": "^6.11.3",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-admin": "^3.19.12",
